@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王小明的個人簡介 | 專業軟體工程師</title>
+    <style>
+        /* CSS 樣式 - 模仿 LinkedIn 風格 */
+        :root {
+            --primary-color: #0073b1; /* LinkedIn 藍色 */
+            --background-color: #f3f2ef; /* LinkedIn 背景灰色 */
+            --text-color: #000000e6;
+            --secondary-text-color: #00000099;
+            --border-color: #d9d9d9;
+            --card-background: #ffffff;
+            --font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1128px; /* LinkedIn 標準網頁寬度 */
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+
+        /* 區塊通用樣式 */
+        section {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 24px;
+        }
+
+        /* 標題樣式 */
+        h1, h2, h3, h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* 首部區塊 (Profile Header) */
+        .profile-header {
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background-image {
+            height: 196px;
+            background-color: #a0b4b7; /* 默認藍灰色背景 */
+            background-image: linear-gradient(to right, #a0b4b7, #dbe2e3);
+        }
+
+        .profile-details {
+            padding: 24px;
+            padding-top: 0;
+            position: relative;
+            margin-top: -110px; /* 將相片向上移 */
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--card-background);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            object-fit: cover;
+            background-color: #ccc; /* 預留位置顏色 */
+        }
+
+        .name-headline {
+            margin-top: 16px;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .headline {
+            font-size: 16px;
+            color: var(--text-color);
+            margin-top: 4px;
+        }
+
+        .location-contact {
+            font-size: 14px;
+            color: var(--secondary-text-color);
+            margin-top: 8px;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* 關於 (About) 區塊 */
+        .about-section p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        /* 經驗和教育 (Experience & Education) 區塊 */
+        .entry {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+        }
+
+        .entry:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .entry-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .entry-subtitle {
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        .entry-meta {
+            font-size: 14px;
+            color: var(--secondary-text-color);
+        }
+
+        .entry-description {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* 技能 (Skills) 區塊 */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-item {
+            background-color: #f3f2ef;
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+
+        /* 頁腳 (Footer) */
+        footer {
+            text-align: center;
+            padding: 24px 0;
+            font-size: 12px;
+            color: var(--secondary-text-color);
+        }
+
+        /* 響應式調整 */
+        @media (max-width: 768px) {
+            .background-image {
+                height: 120px;
+            }
+            .profile-details {
+                margin-top: -70px;
+                padding: 16px;
+            }
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+            .name {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section class="profile-header">
+        <div class="background-image"></div>
+        <div class="profile-details">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2NjYyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkeT0iLjNlbSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IiM2NjYiPtS4vE7HqDw8L3RleHQ+PC9zdmc+" alt="王小明的個人相片" class="profile-photo">
+            
+            <div class="name-headline">
+                <h1 class="name">王小明 (David Wang)</h1>
+                <p class="headline">資深軟體工程師 | 專注於後端開發與雲端架構 | Java, Python, AWS</p>
+                <p class="location-contact">台灣，台北市 · <span class="contact-info"><a href="#contact">聯絡方式</a></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <h2>關於</h2>
+        <p>
+            擁有超過 8 年的軟體開發經驗，專注於構建高效能、可擴展的後端系統。熱衷於解決複雜的技術細節，並將商業需求轉化為堅實的技術解決方案。曾帶領團隊完成多項大型專案，包括從傳統架構轉移至微服務架構 (Microservices)。不斷追求新知，目前專注於雲端原生技術和 AI 應用整合。
+        </p>
+    </section>
+
+    <section class="experience-section">
+        <h2>經驗</h2>
+        
+        <div class="entry">
+            <h3 class="entry-title">資深軟體工程師</h3>
+            <p class="entry-subtitle">TechSpark Innovations · 全職</p>
+            <p class="entry-meta">2018 年 6 月 - 至今 · 5 年 8 月</p>
+            <p class="entry-meta">台灣 台北市</p>
+            <div class="entry-description">
+                <ul>
+                    <li>負責核心交易系統的後端開發與維護，使用 Java (Spring Boot) 和 PostgreSQL。</li>
+                    <li>成功將舊有架構遷移至 AWS 雲端，優化效能並降低了 30% 的營運成本。</li>
+                    <li>帶領 5 人的開發小組，進行代碼審查和制定開發規範。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">軟體工程師</h3>
+            <p class="entry-subtitle">DataDynamo Solutions · 全職</p>
+            <p class="entry-meta">2015 年 9 月 - 2018 年 5 月 · 2 年 9 月</p>
+            <p class="entry-meta">台灣 台北市</p>
+            <div class="entry-description">
+                <ul>
+                    <li>開發 RESTful APIs，支持行動端應用程式和網頁端。</li>
+                    <li>使用 Python (Django) 完成數據處理管道。</li>
+                    <li>負責數據庫設計和效能優化。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-section">
+        <h2>教育</h2>
+        
+        <div class="entry">
+            <h3 class="entry-title">國立台灣大學</h3>
+            <p class="entry-subtitle">資訊工程學系，碩士</p>
+            <p class="entry-meta">2013 年 9 月 - 2015 年 6 月</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">國立台灣大學</h3>
+            <p class="entry-subtitle">資訊工程學系，學士</p>
+            <p class="entry-meta">2009 年 9 月 - 2013 年 6 月</p>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <h2>技能</h2>
+        <ul class="skills-list">
+            <li class="skill-item">Java</li>
+            <li class="skill-item">Python</li>
+            <li class="skill-item">Spring Boot</li>
+            <li class="skill-item">Django</li>
+            <li class="skill-item">SQL / PostgreSQL</li>
+            <li class="skill-item">Amazon Web Services (AWS)</li>
+            <li class="skill-item">Microservices</li>
+            <li class="skill-item">Docker & Kubernetes</li>
+            <li class="skill-item">Git / CI/CD</li>
+            <li class="skill-item">團隊領導</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>聯絡方式</h2>
+        <p>如果您有任何合作機會或技術問題，歡迎隨時聯絡我。</p>
+        <p>Email: <a href="mailto:david.wang.dev@example.com" style="color: var(--primary-color);">david.wang.dev@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/davidwangexample/" target="_blank" style="color: var(--primary-color);">www.linkedin.com/in/davidwangexample/</a> (範例)</p>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 王小明 (David Wang). 保留所有權利。</p>
+    <p>此網頁為個人簡介範例，模仿 LinkedIn 風格。</p>
+</footer>
+
+</body>
+</html>
