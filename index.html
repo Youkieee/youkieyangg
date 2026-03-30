@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[你的姓名] - 個人專屬網頁</title>
     <style>
-        /* 基礎樣式設定 */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f3f2ef; /* 類似 LinkedIn 的背景色 */
+            background-color: #f3f2ef; 
             color: #333;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
         
-        /* 網頁主要容器 */
         .container {
             max-width: 800px;
             margin: 30px auto;
             padding: 0 20px;
         }
 
-        /* 卡片共用樣式 (每個區塊看起來像一張卡片) */
         .card {
             background-color: #ffffff;
             border-radius: 8px;
@@ -31,47 +28,49 @@
             margin-bottom: 20px;
         }
 
-        /* 標題、基本資訊與頭像區塊 */
+        /* --- 基本資訊與頭像區塊樣式 --- */
         .header-section {
-            text-align: center; /* 讓頭像和文字置中 */
+            text-align: center; 
             padding-bottom: 35px;
         }
-        
-        /* 頭像專屬樣式 */
+
         .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #ffffff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            margin-bottom: 15px;
-            background-color: #ddd;
+            width: 150px;        
+            height: 150px;       
+            border-radius: 50%;   
+            object-fit: cover;    
+            border: 4px solid #ffffff; 
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15); 
+            margin-bottom: 15px; 
+            background-color: #ddd; 
         }
 
         .header-section h1 {
             margin: 0 0 5px 0;
-            font-size: 28px;
+            font-size: 30px;
             color: #000;
         }
+        
         .headline {
-            font-size: 18px;
+            font-size: 19px;
             color: #555;
-            margin: 0 auto 15px auto;
-            max-width: 600px; /* 限制標題寬度讓排版更好看 */
+            max-width: 600px;
+            margin: 0 auto 15px auto; 
         }
+        
         .contact-info a {
-            color: #0a66c2; /* LinkedIn 藍 */
+            color: #0a66c2; 
             text-decoration: none;
-            margin: 0 10px; /* 調整為左右間距 */
+            margin: 0 10px; 
             font-weight: 500;
-            display: inline-block;
+            display: inline-block; 
         }
+        
         .contact-info a:hover {
             text-decoration: underline;
         }
 
-        /* 各區塊標題 */
+        /* --- 其他區塊共用樣式 --- */
         .section-title {
             font-size: 20px;
             color: #000;
@@ -81,33 +80,12 @@
             margin-bottom: 20px;
         }
 
-        /* 經歷與學歷區塊樣式 */
-        .item {
-            margin-bottom: 20px;
-        }
-        .item:last-child {
-            margin-bottom: 0;
-        }
-        .item-title {
-            font-weight: bold;
-            font-size: 16px;
-            margin: 0;
-        }
-        .item-subtitle {
-            color: #555;
-            margin: 2px 0 10px 0;
-            font-size: 14px;
-        }
-        .item-desc {
-            margin: 0;
-            font-size: 15px;
-        }
-        ul.bullet-list {
-            margin-top: 5px;
-            padding-left: 20px;
-        }
+        .item { margin-bottom: 20px; }
+        .item:last-child { margin-bottom: 0; }
+        .item-title { font-weight: bold; font-size: 16px; margin: 0; }
+        .item-subtitle { color: #555; margin: 2px 0 10px 0; font-size: 14px; }
+        ul.bullet-list { margin-top: 5px; padding-left: 20px; }
 
-        /* 技能標籤樣式 */
         .skill-tag {
             display: inline-block;
             background-color: #e9e5df;
@@ -125,14 +103,15 @@
     <div class="container">
         
         <div class="card header-section">
+            
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVQXl1_Iffr281bAp7W8P6jeOTPpOEMqjfe5kK1QoWv_otSb1LzhVypV0VnBQ9EKJQvMOFGl9DmUwGFngKTN9Cg0T08UJ7-EIdFBsJTxr&s=10">
             
             <h1>[你的姓名]</h1>
-            <div class="headline">[你的專業標題，例如：擁有 5 年經驗的 UI/UX 設計師，致力於打造直覺的數位體驗]</div>
+            <div class="headline">[你的專業標題，例如：擁有 5 年經驗的 UI/UX 設計師]</div>
             <div class="contact-info">
                 <a href="mailto:your.email@example.com">Email 聯絡我</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="https://github.com/yourprofile" target="_blank">作品集/GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">作品集/GitHub</a>
             </div>
         </div>
 
@@ -143,23 +122,12 @@
 
         <div class="card">
             <h2 class="section-title">工作經歷 (Experience)</h2>
-            
             <div class="item">
                 <h3 class="item-title">[最近一份職稱] - [公司名稱]</h3>
                 <p class="item-subtitle">[開始年月] - [結束年月 或 至今] | [地點]</p>
                 <ul class="bullet-list">
                     <li>[具體成就 1：例如，帶領團隊完成 OOO 專案，提升了 30% 轉換率。]</li>
                     <li>[具體成就 2：例如，優化 OOO 流程，為公司節省了 20% 的成本。]</li>
-                    <li>[日常職責：負責 OOO 系統的開發與維護。]</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <h3 class="item-title">[上一份職稱] - [公司名稱]</h3>
-                <p class="item-subtitle">[開始年月] - [結束年月] | [地點]</p>
-                <ul class="bullet-list">
-                    <li>[具體成就 1：量化你的貢獻。]</li>
-                    <li>[具體成就 2：強調你解決了什麼問題。]</li>
                 </ul>
             </div>
         </div>
@@ -170,18 +138,7 @@
                 <span class="skill-tag">專案管理</span>
                 <span class="skill-tag">數位行銷</span>
                 <span class="skill-tag">資料分析</span>
-                <span class="skill-tag">Python</span>
                 <span class="skill-tag">跨部門溝通</span>
-                <span class="skill-tag">SEO 優化</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="section-title">學歷 (Education)</h2>
-            <div class="item">
-                <h3 class="item-title">[學校名稱]</h3>
-                <p class="item-subtitle">[學位名稱，例如：資訊工程學系 學士] | [畢業年份]</p>
-                <p class="item-desc">[選填：傑出表現、獎學金、或是相關的專題研究。]</p>
             </div>
         </div>
 
